@@ -190,6 +190,12 @@ class ViewAgreementPage extends Page {
   }
 
   getDraftAgreementMessage() {
+    return $(
+      '//div[contains(@class,"govuk-notification-banner__content")]//p[1]'
+    )
+  }
+
+  getDraftAgreementMessageForWMPGrant() {
     return $('//div[contains(@class,"govuk-notification-banner__content")]//h2')
   }
 }

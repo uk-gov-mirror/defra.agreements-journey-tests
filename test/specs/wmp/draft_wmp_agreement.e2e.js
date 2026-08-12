@@ -53,7 +53,8 @@ describe('Given the applicant has received the WMP offer', () => {
     it('Then should display draft agreement notification message on WMP agreement', async () => {
       const expectedText = 'This is a draft version of your agreement'
 
-      const bannerMessage = await viewAgreementPage.getDraftAgreementMessage()
+      const bannerMessage =
+        await viewAgreementPage.getDraftAgreementMessageForWMPGrant()
 
       await expect(bannerMessage).toBeDisplayed()
       await expect(bannerMessage).toHaveText(expectedText)
